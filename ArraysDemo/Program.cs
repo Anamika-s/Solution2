@@ -4,6 +4,21 @@
     {
         static void Main(string[] args)
         {
+            int[] a = new int[10];
+            Console.WriteLine("enter numbers of array a");
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i]= SByte.Parse(Console.ReadLine());
+            }
+            int Sum = 0;
+            for(int i=0;i< a.Length; i++)
+            {
+                if (a[i] < 0) continue;
+                if (a[i] == 0) break;
+                Sum += a[i];
+            }
+
+            Console.WriteLine("Sum is " + Sum);
             byte num1 = 90;
             num1 = 91;
             Byte.TryParse(Console.ReadLine(), out num1);
